@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Fyndra Miner - Telegram Mini App</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="login-screen" class="screen">
+  <div class="card login-card">
+    <h2>Fyndra Miner</h2>
+    <img src="assets/logo.png" alt="logo" class="logo" />
+    <p>Enter password to continue</p>
+    <input id="password-input" type="password" placeholder="Password" />
+    <button id="login-btn">Login</button>
+    <div id="login-error" class="error"></div>
+    <div class="hint">Password is provided in the README.</div>
+  </div>
+</div>
+
+<div id="app-screen" class="screen hidden">
+  <header>
+    <div class="left"><img src="assets/logo.png" class="logo-small" alt="logo"> <span class="app-title">Fyndra Miner</span></div>
+    <div class="right">V.1.0.0</div>
+  </header>
+  <main>
+    <aside>
+      <div class="plan">Plan: <strong>Lifetime</strong></div>
+      <div class="time-spent">Time spent: <span id="time-spent">00:00:00</span></div>
+      <div class="controls">
+        <button id="start-btn">Start</button>
+        <button id="settings-btn">Settings</button>
+      </div>
+      <div class="found-block">
+        <label>Wallet Found:</label>
+        <div id="wallet-found" class="wallet">—</div>
+        <div id="balance">Balance: —</div>
+        <div id="copy-note" class="note"></div>
+      </div>
+    </aside>
+    <section class="screen-output">
+      <div id="black-screen" class="black-screen"></div>
+    </section>
+  </main>
+  <footer>
+    <small>Demo only — generates fake wallet-like strings locally.</small>
+  </footer>
+</div>
+
+<!-- Settings Modal -->
+<div id="settings-modal" class="modal hidden">
+  <div class="modal-card">
+    <h3>Settings</h3>
+    <label>Starting elapsed time (seconds):</label>
+    <input id="start-elapsed" type="number" min="0" value="0" />
+    <label>Target (seconds) when wallet will be found:</label>
+    <input id="target-seconds" type="number" min="1" value="120" />
+    <label>Telegram Bot Token (optional):</label>
+    <input id="tg-token" type="text" placeholder="Bot token" />
+    <label>Telegram Chat ID (optional):</label>
+    <input id="tg-chat" type="text" placeholder="Chat ID" />
+    <div class="modal-actions">
+      <button id="save-settings">Save</button>
+      <button id="cancel-settings">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Embedded password (client-side). Replace if you want a different password.
+  const APP_PASSWORD = "KP!9vX7zQ";
+</script>
+<script src="app.js"></script>
+</body>
+</html>

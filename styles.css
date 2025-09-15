@@ -1,0 +1,29 @@
+:root{--bg:#0b0b0b;--green:#00ff41;--panel:#111;--muted:#999}
+body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:#eee;height:100vh;display:flex;flex-direction:column}
+.screen{height:100vh;display:flex;align-items:center;justify-content:center}
+.hidden{display:none}
+.card{background:linear-gradient(180deg,#111,#0f0f0f);padding:24px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.6);text-align:center}
+.login-card .logo{width:96px;height:96px;object-fit:contain;margin:8px auto}
+input[type=password],input[type=text],input[type=number]{width:100%;padding:8px;margin:8px 0;border-radius:6px;border:1px solid #333;background:#070707;color:#fff}
+button{padding:10px 14px;border-radius:6px;border:none;background:#222;color:#fff;cursor:pointer}
+button:hover{opacity:0.95}
+header{display:flex;justify-content:space-between;padding:12px 20px;border-bottom:1px solid #111;background:#060606}
+.logo-small{width:28px;height:28px;vertical-align:middle;margin-right:8px}
+main{display:flex;flex:1;overflow:hidden}
+aside{width:280px;padding:18px;box-sizing:border-box;background:#080808;border-right:1px solid #111;display:flex;flex-direction:column}
+.plan{font-size:16px;margin-bottom:8px}
+.time-spent{margin-bottom:12px}
+.controls{display:flex;gap:8px;margin-bottom:12px}
+.found-block{margin-top:auto}
+.wallet{background:#111;padding:10px;border-radius:6px;margin:6px 0;cursor:pointer;user-select:none}
+.note{color:var(--muted);font-size:12px;margin-top:6px}
+.screen-output{flex:1;display:flex;align-items:stretch;justify-content:center;padding:18px}
+.black-screen{background:#000;color:var(--green);font-family:monospace;padding:12px;border-radius:6px;flex:1;overflow:auto;box-shadow:inset 0 0 40px rgba(0,255,65,0.02)}
+footer{padding:8px 12px;background:#070707;border-top:1px solid #111;text-align:center;color:var(--muted);font-size:12px}
+
+/* modal */
+.modal{position:fixed;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6)}
+.modal-card{background:#0b0b0b;padding:20px;border-radius:8px;width:360px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.error{color:#ff6b6b;margin-top:8px}
+.hint{color:var(--muted);font-size:12px;margin-top:8px}
